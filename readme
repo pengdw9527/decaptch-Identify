@@ -1,1 +1,10 @@
-231
+验证码图片识别通用工具.
+启动exe文件，详见压缩包说明
+识别方:调用接口python代码如下
+
+import requests
+import json
+
+r=requests.post('http://127.0.0.1:7788',data=open('5.jpg','rb'))
+code=json.loads(r.text)['code']
+print(code)
